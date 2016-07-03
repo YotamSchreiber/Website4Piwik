@@ -1,0 +1,46 @@
+
+#profileButton{
+    height:60px;
+    width:150px;
+    background-color: khaki;
+}
+
+#calculatorButton{
+    height:60px;
+    width:150px;
+    background-color: steelblue;
+}
+
+#readmeButton{
+    height:60px;
+    width:150px;
+    background-color: seagreen;
+}
+
+#profileButton{
+    display: none;
+}
+
+#calculatorButton{
+    display: none;
+}
+
+#readmeButton{
+    display: none;
+}
+
+#formProfile{
+    display: none;
+}
+
+#formCalculator{
+    display: none;
+}
+
+#formReadme{
+    display: none;
+}
+
+#formWrong{
+    display: none;
+}

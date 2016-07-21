@@ -6,6 +6,7 @@ var lb = document.getElementById("loginButton");
 var pb = document.getElementById("profileButton");
 var cb = document.getElementById("calculatorButton");
 var rb = document.getElementById("readmeButton");
+var npb = document.getElementById("openNewButton");
 var plus = document.getElementById("+");
 var minus = document.getElementById("-");
 var mult = document.getElementById("*");
@@ -30,6 +31,18 @@ var numberOnly = function (e) {
     if (!(a.indexOf(k)>=0))
         e.preventDefault();
 };
+
+// open new page
+npb.addEventListener("click", function() {
+    $.ajax({
+        url: '/openNewPage',
+        type: 'GET',
+        dataType: 'json',
+		success: function (data) {
+            data.open();
+        }
+    });
+});
 
 // in order to check if the user is already loged-in
 $(document).ready(function(){
@@ -81,6 +94,13 @@ lb.addEventListener("click", function() {
     });
 });
 
+
+
+
+
+
+
+
 pb.addEventListener("click", function () {
 
     // getting a random qoute
@@ -91,11 +111,19 @@ pb.addEventListener("click", function () {
             $('#formRandomQuote').text(data);
         }
     });
-
+	
+	//dataLayer.push({'profile': 'clicked'});
+	//window.alert(dataLayer[1].profile);
     pf.style.display = "block";
     cf.style.display = "none";
     rf.style.display = "none";
 });
+
+
+
+
+
+
 
 cb.addEventListener("click", function () {
 

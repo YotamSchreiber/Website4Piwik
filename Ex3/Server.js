@@ -24,6 +24,22 @@ app.get('/', function (req, res) {
     res.sendFile( __dirname + "/www/profile.html" );
 });
 
+
+
+
+
+
+app.get('/openNewPage', function (req, res) {
+    res.sendFile( __dirname + "/www/newPage.html" );
+});
+
+
+
+
+
+
+
+
 app.get('/isLogin', function (req, res) {
     sess = req.session;
     if(sess.username) {
